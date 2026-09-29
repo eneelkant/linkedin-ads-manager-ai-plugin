@@ -7,7 +7,7 @@
     {
       "name": "linkedin-ads-manager",
       "source": "./linkedin-ads-manager",
-      "description": "Programmatic LinkedIn ABM campaign management — clone campaigns, analyze targeting, update budgets, batch pause/resume, audit spend, and search URNs via a Python CLI."
+      "description": "LinkedIn Ads Manager for Claude with MCP support — campaign management, reporting, audits, and optional organization posting. Use /linkedin-setup then the linkedin-ads-manager skill."
     }
   ]
 }

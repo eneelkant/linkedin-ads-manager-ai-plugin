@@ -1,0 +1,28 @@
+{
+  "name": "linkedin-ads-manager-claude-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LinkedIn Ads Manager MCP — Claude plugin + cross-platform MCP server for ChatGPT, Gemini, and Cursor",
+  "license": "MIT",
+  "workspaces": [
+    "mcp-server"
+  ],
+  "scripts": {
+    "build": "npm run build -w @eneelkant/linkedin-ads-mcp",
+    "lint": "npm run lint -w @eneelkant/linkedin-ads-mcp",
+    "typecheck": "npm run typecheck -w @eneelkant/linkedin-ads-mcp",
+    "test": "npm run test -w @eneelkant/linkedin-ads-mcp",
+    "test:mcp": "npm run test:mcp -w @eneelkant/linkedin-ads-mcp",
+    "smoke": "npm run smoke -w @eneelkant/linkedin-ads-mcp",
+    "start": "npm run start -w @eneelkant/linkedin-ads-mcp",
+    "start:stdio": "npm run start:stdio -w @eneelkant/linkedin-ads-mcp",
+    "security:scan": "node scripts/security-scan.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eneelkant/linkedin-ads-manager-claude-plugin.git"
+  }
+}

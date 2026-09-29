@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "linkedin-ads-manager": {
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/mcp-server/dist/index.js",
+        "--stdio"
+      ],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  }
+}

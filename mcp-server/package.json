@@ -1,0 +1,68 @@
+{
+  "name": "@eneelkant/linkedin-ads-mcp",
+  "version": "1.0.0",
+  "description": "LinkedIn Ads Manager MCP server — campaign management, reporting, and optional organization posting for Claude, ChatGPT, Gemini, and Cursor",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "linkedin-ads-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts --http",
+    "start": "node dist/index.js --http",
+    "start:stdio": "node dist/index.js --stdio",
+    "lint": "eslint src tests",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:mcp": "vitest run tests/mcp-protocol.test.ts tests/http-transport.test.ts",
+    "smoke": "tsx scripts/smoke-mcp.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "linkedin",
+    "linkedin-ads",
+    "model-context-protocol",
+    "claude",
+    "chatgpt",
+    "gemini",
+    "cursor"
+  ],
+  "author": "Neelkant Ekbote",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eneelkant/linkedin-ads-manager-claude-plugin.git",
+    "directory": "mcp-server"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/express": "^2.0.0",
+    "@modelcontextprotocol/node": "^2.0.0",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.18.1",
+    "eslint": "^9.35.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.43.0",
+    "vitest": "^3.2.4"
+  }
+}

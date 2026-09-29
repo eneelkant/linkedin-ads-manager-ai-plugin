@@ -1,12 +1,37 @@
-# Credentials
+# Credentials / secrets
+.env
+.env.*
+!.env.example
 .credentials
 skills/linkedin-ads-manager/.credentials
+linkedin-ads-manager/skills/linkedin-ads-manager/.credentials
+**/scripts/.pause_state.json
+
+# Node
+node_modules/
+mcp-server/node_modules/
+mcp-server/dist/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
-.env
+.pytest_cache/
+.venv/
+venv/
 
-# OS
+# OS / IDE
 .DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs / temp
+*.log
+tmp/
+.temp/
