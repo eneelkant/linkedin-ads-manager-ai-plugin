@@ -3,9 +3,9 @@ import { maskToken, redactSecrets, sanitizeForOutput } from "../src/utils/redact
 
 describe("token redaction", () => {
   it("redacts bearer tokens", () => {
-    const raw = "Authorization: Bearer abcdefghijklmnop.secret.token";
+    const raw = "Authorization: Bearer token-value-abcdefghijklmnop.secret.token";
     expect(redactSecrets(raw)).toContain("[REDACTED]");
-    expect(redactSecrets(raw)).not.toContain("abcdefghijklmnop");
+    expect(redactSecrets(raw)).not.toContain("token-value-abcdefghijklmnop");
   });
 
   it("masks tokens for display", () => {
@@ -15,7 +15,7 @@ describe("token redaction", () => {
 
   it("sanitizes nested objects", () => {
     const sanitized = sanitizeForOutput({
-      authorization: "Bearer supersecrettokenvalue123456",
+      authorization: "Bearer token-value-supersecret123456",
       nested: { access_token: "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz" },
       ok: true,
     });
