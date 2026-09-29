@@ -1,0 +1,14 @@
+.git
+.github
+node_modules
+mcp-server/node_modules
+mcp-server/dist
+.env
+.env.*
+!.env.example
+**/__pycache__
+**/*.pyc
+coverage
+tmp
+.DS_Store
+*.log

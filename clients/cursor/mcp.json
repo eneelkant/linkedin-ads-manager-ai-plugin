@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "linkedin-ads-manager": {
+      "url": "https://YOUR-DOMAIN.example.com/mcp"
+    }
+  }
+}

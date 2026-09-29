@@ -6,12 +6,14 @@ description: >
   "pause LinkedIn ads", "audit LinkedIn spend", "launch an ABM campaign",
   "update LinkedIn targeting", or needs help with LinkedIn advertising
   operations, budget management, or campaign analytics.
-version: 0.1.0
+version: 1.0.0
 ---
 
 # LinkedIn Ads Manager
 
 Manage LinkedIn ad campaigns programmatically via a Python CLI. Full campaign lifecycle: creation, cloning, budget management, targeting configuration, performance analytics, and batch operations.
+
+This Claude skill remains the supported Cowork/plugin path. The repository also ships a canonical TypeScript MCP server in `mcp-server/` for Claude remote MCP, ChatGPT, Gemini, and Cursor. Prefer the Python CLI commands below inside this skill so existing Claude plugin installs keep working.
 
 ## Credential Handling
 

@@ -1,0 +1,12 @@
+{
+  "name": "linkedin-ads-manager",
+  "transport": "streamable-http",
+  "url": "https://YOUR-DOMAIN.example.com/mcp",
+  "headers": {
+    "Authorization": "Bearer YOUR_MCP_HTTP_BEARER_TOKEN"
+  },
+  "notes": [
+    "Replace YOUR-DOMAIN and bearer token before use.",
+    "Do not put LinkedIn access tokens in this client config; keep them on the server."
+  ]
+}

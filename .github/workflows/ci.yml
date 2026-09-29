@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main, feat/**]
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: mcp-server/package-lock.json
+
+      - name: Install
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit + MCP protocol tests
+        run: npm test
+
+      - name: MCP smoke
+        run: npm run smoke
+
+      - name: Build
+        run: npm run build
+
+      - name: Security / secret scan
+        run: npm run security:scan
+
+      - name: Ensure .env is not tracked
+        run: |
+          if git ls-files | grep -E '(^|/)\.env($|\.)' | grep -v '.env.example'; then
+            echo "Tracked .env file detected"
+            exit 1
+          fi
+
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Docker build
+        run: docker build -t linkedin-ads-mcp:ci .

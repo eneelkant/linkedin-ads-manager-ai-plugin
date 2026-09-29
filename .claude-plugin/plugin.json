@@ -1,0 +1,8 @@
+{
+  "name": "linkedin-ads-manager-claude-plugin",
+  "version": "1.0.0",
+  "description": "Marketplace root for LinkedIn Ads Manager. Installable plugin source is ./linkedin-ads-manager (see marketplace.json).",
+  "author": {
+    "name": "Neelkant Ekbote"
+  }
+}
