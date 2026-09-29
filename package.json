@@ -1,5 +1,5 @@
 {
-  "name": "linkedin-ads-manager-claude-plugin",
+  "name": "linkedin-ads-manager-ai-plugin",
   "version": "1.0.0",
   "private": true,
   "description": "LinkedIn Ads Manager MCP — Claude plugin + cross-platform MCP server for ChatGPT, Gemini, and Cursor",
@@ -23,6 +23,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eneelkant/linkedin-ads-manager-claude-plugin.git"
+    "url": "https://github.com/eneelkant/linkedin-ads-manager-ai-plugin.git"
   }
 }

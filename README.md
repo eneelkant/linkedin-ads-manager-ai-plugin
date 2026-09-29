@@ -67,8 +67,8 @@ Install from this public repository / Claude plugin marketplace-compatible struc
 ### Method B — Local MCP
 
 ```bash
-git clone https://github.com/eneelkant/linkedin-ads-manager-claude-plugin.git
-cd linkedin-ads-manager-claude-plugin
+git clone https://github.com/eneelkant/linkedin-ads-manager-ai-plugin.git
+cd linkedin-ads-manager-ai-plugin
 cp .env.example .env
 npm install
 npm run build
